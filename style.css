@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+    border: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+
+:root {
+    --primary: #AA71FF;
+    --primary-hover: #8C3EFF;
+    --primary-clicked: #C8A4FF;
+    --secondary: #FCA7E4;
+    --secondary-hover: #FA65D0;
+    --secondary-clicked: #FEE9F8;
+    --green: #62D26F;
+    --yellow: #FFDD2B;
+    --orange: #FD612C;
+    --blue: #7A71F6;
+    --red: #E8384F;
+    --text-dark-primary: #151918;
+    --text-dark-secondary: #2c3432;
+    --text-light-primary: #fcfcfc;
+    --text-light-secondary: #d7dddc;
+    --grey-primary: #8d9f9b;
+    --grey-light: #a9b6b3;
+    --grey-dark: #4b5956;
+    --bg-dark-primary: #05000b;
+    --bg-dark-secondary: #19003e;
+    --bg-light-primary: #fbf9ff;
+    --bg-light-secondary: #f1e8ff;
+    
+    --transition: all 500ms ease-in-out;
+    --shadow:rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;   
+}
+
+body {
+    background-color: var(--bg-light-primary);
+    font-family: 'Roboto', sans-serif;
+    max-width: 100vw;
+    
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h5 {
+    color: var(--text-dark-secondary);
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 2.6rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+h5 {
+    font-size: 0.86rem;
+}
+
+p {
+    line-height: 1.8;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+section{
+    padding:  10rem 0 7rem;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+section h1{
+    text-align: center;
+    display: block;
+    margin-bottom: 5rem;
+}
+
+img{
+    width:  100%;
+}
+
+.btn{
+    padding: 1.4rem 3.4rem;
+    font-size: 1.1rem;
+    color: var(--text-dark-secondary);
+    background: var(--primary);
+    display: inline-block;
+    margin: 2rem 0;
+    transition: var(--transition);
+}
+
+.btn:hover{
+    box-shadow: 0 2rem 2rem var(--grey-dark);
+}
+
+.btn-primary{
+    background: var(--primary);
+    color: var(--text-light-primary);
+}
+
+/* *************** NAVBAR ******************** */
+nav{
+    width: 100%;
+    box-shadow: var(--shadow);
+    height: 5rem;
+    background: var(--bg-light-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+  /*  border-bottom: 1px solid var(--primary);*/
+}
+
+nav .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+nav button{
+    display: none;
+}
+
+nav h3{
+    color: var(--primary);
+}
+
+nav .container ul{
+    display: flex;
+    height: 100%;
+}
+
+nav .container ul li a{
+    height: 100%;
+    width: 7rem;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-dark-secondary);
+    position: relative;
+    transition: var(--transition);
+}
+
+nav .container ul li a:hover{
+    color: var(--primary-hover);
+}
+
+nav .container ul li a.active{
+    background: var(--primary);
+    color: var(--text-light-primary);
+    font-weight: 700;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    height:80%;
+    margin-top: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+border-radius: 8px;
+*/
+
+/* GRADIENTS 
+
+primary:
+background: linear-gradient(54deg, rgba(170,113,255,1) 0%, rgba(253,97,44,1) 100%);
+background: linear-gradient(54deg, rgba(170,113,255,1) 0%, rgba(122,113,246,1) 100%);
+
+background: linear-gradient(54deg, rgba(250,101,208,1) 0%, rgba(253,97,44,1) 100%);
+
+background: radial-gradient(circle, rgba(170,113,255,1) 0%, rgba(252,167,228,1) 100%);
+
+background: radial-gradient(circle, rgba(252,167,228,1) 0%, rgba(122,113,246,1) 100%);
+
+*/
