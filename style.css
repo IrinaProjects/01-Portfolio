@@ -61,7 +61,7 @@ h5 {
 }
 
 h1 {
-    font-size: 3.8rem;
+    font-size: 3.6rem;
 }
 
 h2 {
@@ -106,17 +106,26 @@ img{
 }
 
 .btn{
-    padding: 1.4rem 3.4rem;
+    padding: 1.2rem 3rem;
     font-size: 1.1rem;
     color: var(--text-dark-secondary);
     background: var(--primary);
     display: inline-block;
     margin: 2rem 0;
     transition: var(--transition);
+    border-radius: 8px;
+    border: transparent inset;
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+    white-space: nowrap;
+    font-weight: 700;
 }
 
 .btn:hover{
-    box-shadow: 0 2rem 2rem var(--grey-dark);
+    padding: 1.21rem 3.01rem;
+    border: 1px solid var(--primary-hover) ;
+    color: var(--primary-hover);
+    background: transparent; 
 }
 
 .btn-primary{
@@ -179,10 +188,148 @@ nav .container ul li a.active{
     color: var(--text-light-primary);
     font-weight: 700;
     border-radius: 8px;
-    box-shadow: var(--shadow);
     height:80%;
     margin-top: 8px;
 }
+
+
+/* *************** HERO ******************** */
+section.landing{
+    display: grid;
+    place-items: center;
+    position: relative;
+    top: 5rem;
+    padding-bottom: 14rem;
+}
+
+section.landing .container{
+    display: grid;
+    grid-template-columns: 5rem auto 26rem;
+    gap: 2rem;
+}
+
+section.landing .socials{
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    margin-top: 5rem;
+}
+
+section.landing .socials a{
+    background: var(--primary);
+    padding: 0.3rem;
+    border-radius: 50%;
+    height: 2.5rem;
+    width: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-light-primary);
+    font-weight: 700;
+    font-size: 1.5rem;
+    transition: var(--transition);
+}
+
+section.landing .socials a:hover{
+    background: transparent;
+    color: var(--primary-hover);
+}
+
+
+section.landing .info h1{
+    text-align: left;
+    margin: 0;
+}
+
+section.landing .info h3{
+    margin: 2.4rem 0 1rem;
+}
+
+section.landing .info p{
+    width: 35rem;
+}
+
+section.landing .profile-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.landing .profile-area .outer-circle{
+    width: 26rem;
+    height: 26rem;
+    border: 2px solid var(--primary);
+    border-radius: 50%;
+    position: relative;
+    animation: move 30s linear infinite;
+}
+
+@keyframes move{
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+section.landing .profile-area .outer-circle span{
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    position: absolute;
+    color: var(--primary);
+    font-size: 2.6rem;
+    background: var(--bg-light-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--primary);
+}
+
+section.landing .profile-area .outer-circle span:nth-child(1){
+    left: calc(50% - 2rem);
+    top: -2rem;
+}
+
+section.landing .profile-area .outer-circle span:nth-child(2){
+    right:-2rem;
+    top: calc(50% - 2rem);
+}
+
+section.landing .profile-area .outer-circle span:nth-child(3){
+    left: -2rem;
+    top: calc(50% - 2rem);
+}
+
+section.landing .profile-area .outer-circle span:nth-child(4){
+    left: calc(50% - 2rem);
+    bottom: -2rem;
+}
+
+section.landing .profile-area .inner-circle{
+    position: absolute;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
