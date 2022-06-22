@@ -29,7 +29,8 @@ html {
     --blue: #7A71F6;
     --red: #E8384F;
     --text-dark-primary: #151918;
-    --text-dark-secondary: #2c3432;
+    --text-dark-secondary: #535856;
+    /*2c3432*/
     --text-light-primary: #fcfcfc;
     --text-light-secondary: #d7dddc;
     --grey-primary: #8d9f9b;
@@ -38,18 +39,20 @@ html {
     --bg-dark-primary: #05000b;
     --bg-dark-secondary: #19003e;
     --bg-light-primary: #fbf9ff;
-    --bg-light-secondary: #f1e8ff;
-    
+    --bg-light-secondary: #f5f1fa;
+    /* old variant f1e8ff*/
+
     --transition: all 500ms ease-in-out;
-    --shadow:rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;   
+    --shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
 }
 
 body {
     background-color: var(--bg-light-primary);
     font-family: 'Roboto', sans-serif;
     max-width: 100vw;
-    
+
 }
+
 h1,
 h2,
 h3,
@@ -61,7 +64,7 @@ h5 {
 }
 
 h1 {
-    font-size: 3.6rem;
+    font-size: 3.4rem; /*was 3.6*/
 }
 
 h2 {
@@ -84,28 +87,29 @@ p {
     line-height: 1.8;
 }
 
-.container{
+.container {
     width: 80%;
     margin: 0 auto;
 }
 
-section{
-    padding:  10rem 0 7rem; /* TODO space between sections*/
+section {
+    padding: 10rem 0 7rem;
+    /* TODO space between sections*/
     max-width: 100vw;
     overflow-x: hidden;
 }
 
-section h1{
+section h1 {
     text-align: center;
     display: block;
     margin-bottom: 5rem;
 }
 
-img{
-    width:  100%;
+img {
+    width: 100%;
 }
 
-.btn{
+.btn {
     padding: 1.2rem 3rem;
     font-size: 1.1rem;
     color: var(--text-dark-secondary);
@@ -114,27 +118,26 @@ img{
     margin: 2rem 0;
     transition: var(--transition);
     border-radius: 8px;
-    border: transparent inset;
+    border: 1px solid var(--primary-hover);
     transition: var(--transition);
     box-shadow: var(--shadow);
     white-space: nowrap;
     font-weight: 700;
 }
 
-.btn:hover{
-    padding: 1.21rem 3.01rem;
-    border: 1px solid var(--primary-hover) ;
+.btn:hover {
+    padding: 1.2rem 3rem;
     color: var(--primary-hover);
-    background: transparent; 
+    background: var(--bg-light-primary);
 }
 
-.btn-primary{
+.btn-primary {
     background: var(--primary);
     color: var(--text-light-primary);
 }
 
 /* *************** NAVBAR ******************** */
-nav{
+nav {
     width: 100%;
     box-shadow: var(--shadow);
     height: 5rem;
@@ -145,32 +148,32 @@ nav{
     position: fixed;
     z-index: 2;
     top: 0;
-  /*  border-bottom: 1px solid var(--primary);*/
+    /*  border-bottom: 1px solid var(--primary);*/
 }
 
-nav .container{
+nav .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100%;
 }
 
-nav button{
+nav button {
     display: none;
 }
 
-nav h3{
+nav h3 {
     color: var(--primary);
 }
 
-nav .container ul{
+nav .container ul {
     display: flex;
     height: 100%;
 }
 
-nav .container ul li a{
+nav .container ul li a {
     height: 100%;
-    width: 7rem;   
+    width: 7rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -179,22 +182,22 @@ nav .container ul li a{
     transition: var(--transition);
 }
 
-nav .container ul li a:hover{
+nav .container ul li a:hover {
     color: var(--primary-hover);
 }
 
-nav .container ul li a.active{
+nav .container ul li a.active {
     background: var(--primary);
     color: var(--text-light-primary);
     font-weight: 700;
     border-radius: 8px;
-    height:80%;
+    height: 80%;
     margin-top: 8px;
 }
 
 
 /* *************** HERO ******************** */
-section.landing{
+section.landing {
     display: grid;
     place-items: center;
     position: relative;
@@ -202,20 +205,20 @@ section.landing{
     padding-bottom: 14rem;
 }
 
-section.landing .container{
+section.landing .container {
     display: grid;
     grid-template-columns: 5rem auto 26rem;
     gap: 2rem;
 }
 
-section.landing .socials{
+section.landing .socials {
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
     margin-top: 5rem;
 }
 
-section.landing .socials a{
+section.landing .socials a {
     background: var(--primary);
     padding: 0.3rem;
     border-radius: 50%;
@@ -230,32 +233,32 @@ section.landing .socials a{
     transition: var(--transition);
 }
 
-section.landing .socials a:hover{
+section.landing .socials a:hover {
     background: transparent;
     color: var(--primary-hover);
 }
 
 
-section.landing .info h1{
+section.landing .info h1 {
     text-align: left;
     margin: 0;
 }
 
-section.landing .info h3{
+section.landing .info h3 {
     margin: 2.4rem 0 1rem;
 }
 
-section.landing .info p{
-    width: 35rem;
+section.landing .info p {
+    width: 35rem; /* TODO resize this to fit*/
 }
 
-section.landing .profile-area{
+section.landing .profile-area {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-section.landing .profile-area .outer-circle{
+section.landing .profile-area .outer-circle {
     width: 26rem;
     height: 26rem;
     border: 2px solid var(--primary);
@@ -264,13 +267,13 @@ section.landing .profile-area .outer-circle{
     animation: move 30s linear infinite;
 }
 
-@keyframes move{
-    to{
+@keyframes move {
+    to {
         transform: rotate(360deg);
     }
 }
 
-section.landing .profile-area .outer-circle span{
+section.landing .profile-area .outer-circle span {
     display: block;
     width: 4rem;
     height: 4rem;
@@ -285,27 +288,27 @@ section.landing .profile-area .outer-circle span{
     border: 2px solid var(--primary);
 }
 
-section.landing .profile-area .outer-circle span:nth-child(1){
+section.landing .profile-area .outer-circle span:nth-child(1) {
     left: calc(50% - 2rem);
     top: -2rem;
 }
 
-section.landing .profile-area .outer-circle span:nth-child(2){
-    right:-2rem;
+section.landing .profile-area .outer-circle span:nth-child(2) {
+    right: -2rem;
     top: calc(50% - 2rem);
 }
 
-section.landing .profile-area .outer-circle span:nth-child(3){
+section.landing .profile-area .outer-circle span:nth-child(3) {
     left: -2rem;
     top: calc(50% - 2rem);
 }
 
-section.landing .profile-area .outer-circle span:nth-child(4){
+section.landing .profile-area .outer-circle span:nth-child(4) {
     left: calc(50% - 2rem);
     bottom: -2rem;
 }
 
-section.landing .profile-area .inner-circle{
+section.landing .profile-area .inner-circle {
     position: absolute;
     width: 20rem;
     height: 20rem;
@@ -315,25 +318,28 @@ section.landing .profile-area .inner-circle{
 
 
 /* *************** ABOUT ******************** */
-section.about{
+section.about {
     background: var(--bg-light-secondary);
+    /* not needed*/
 }
 
-section.about .container{
+section.about .container {
     display: grid;
     grid-template-columns: 26rem auto;
     gap: 5rem;
 }
 
-section.about p{
+section.about p {
     margin-bottom: 1rem;
+    /*margin-top: 1.5rem; to be in the middle*/
+    margin-top: -0.5rem
 }
 
-section.about .container .read-more-content{
+section.about .container .read-more-content {
     display: none;
 }
 
-section.about .container .read-more{
+section.about .container .read-more {
     display: block;
     margin: 1rem 0 2rem;
     color: var(--primary);
@@ -341,21 +347,21 @@ section.about .container .read-more{
     cursor: pointer;
 }
 
-section.about .container .read-more:hover{
+section.about .container .read-more:hover {
     text-decoration: underline;
 }
 
 
 /* *************** SKILLS ******************** */
-section.skills .container{
+section.skills .container {
     width: 50%;
 }
 
-section.skills .skill{
+section.skills .skill {
     margin-bottom: 1rem;
 }
 
-section.skills .skill .head{
+section.skills .skill .head {
     background: var(--primary);
     color: var(--text-light-primary);
     font-weight: 700;
@@ -366,18 +372,23 @@ section.skills .skill .head{
     cursor: pointer;
 }
 
-section.skills .skill .head h4{
+section.skills .skill .head h4 {
     color: var(--text-light-primary);
-
 }
 
-section.skills .skill .head .left{
+section.skills .skill .head .left {
     display: flex;
     justify-content: center;
     gap: 1rem;
 }
 
-section.skills .skill .item{
+
+section.skills .items {
+    margin-bottom: 3rem;
+    /* important- this is the gap between dropdown menuitems*/
+}
+
+section.skills .skill .item {
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -386,88 +397,139 @@ section.skills .skill .item{
     background: var(--bg-light-secondary);
 }
 
-section.skills .skill .item:last-child{
+section.skills .skill .item:last-child {
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
 }
 
-section.skills .items .item h5{
+section.skills .items .item h4 {
     color: var(--primary-hover);
 }
 
-section.skills .skill .progress-area{
+section.skills .skill .progress-area {
     width: 100%;
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
-section.skills .item .progress-bar{
+section.skills .item .progress-bar {
     width: 100%;
     height: 1rem;
     background: var(--primary-clicked);
 }
 
-section.skills .item .progress-bar .progress{
+section.skills .item .progress-bar .progress {
     height: 100%;
     width: 92%;
     background: var(--primary);
 }
 
-section.skills .item:nth-child(2) .progress-bar .progress{
+section.skills .item:nth-child(2) .progress-bar .progress {
     width: 85%;
 }
 
-section.skills .item:nth-child(3) .progress-bar .progress{
+section.skills .item:nth-child(3) .progress-bar .progress {
     width: 75%;
 }
 
-section.skills .item.two:nth-child(1) .progress-bar .progress{
+section.skills .item.two:nth-child(1) .progress-bar .progress {
     width: 90%;
 }
 
-section.skills .item.two:nth-child(2) .progress-bar .progress{
+section.skills .item.two:nth-child(2) .progress-bar .progress {
     width: 90%;
 }
 
-section.skills .item.two:nth-child(3) .progress-bar .progress{
+section.skills .item.two:nth-child(3) .progress-bar .progress {
     width: 70%;
 }
 
-section.skills .item.three:nth-child(1) .progress-bar .progress{
+section.skills .item.three:nth-child(1) .progress-bar .progress {
     width: 90%;
 }
 
-section.skills .item.three:nth-child(2) .progress-bar .progress{
+section.skills .item.three:nth-child(2) .progress-bar .progress {
     width: 72%;
 }
 
-section.skills .item.three:nth-child(3) .progress-bar .progress{
+section.skills .item.three:nth-child(3) .progress-bar .progress {
     width: 70%;
 }
 
-section.skills .item.four:nth-child(1) .progress-bar .progress{
+section.skills .item.four:nth-child(1) .progress-bar .progress {
     width: 95%;
 }
 
-section.skills .item.four:nth-child(2) .progress-bar .progress{
+section.skills .item.four:nth-child(2) .progress-bar .progress {
     width: 82%;
 }
 
-section.skills .item.four:nth-child(3) .progress-bar .progress{
+section.skills .item.four:nth-child(3) .progress-bar .progress {
     width: 96%;
 }
 
 
+/* *************** SERVICES ******************** */
+section.services {
+    background: var(--bg-light-secondary);
+}
+
+section.services .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;  
+}
+
+section.services .container .service{
+    background: var(--bg-light-primary);
+    padding: 3rem 2rem;
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    gap: 2rem;
+    cursor: default;
+    transition: var(--transition);
+    border-radius: 8px;
+}
+
+section.services .container .service:hover{
+    box-shadow: var(--shadow);
+}
+
+section.services .container .service span{
+    color: var(--primary);
+    font-size: 2rem;
+   /*width: 4rem;
+    height: 4rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--text-light-primary);
+    background-color: var(--primary); or --red */
+}
+
+/*
+section.services .container .service:nth-child(2) span{
+    background: var(--green);
+}
+
+section.services .container .service:nth-child(3) span{
+    background: var(--yellow);
+}*/
 
 
+/* *************** PORFOLIO ******************** */
+section.recent-work h1{
+    text-align: left;
+    margin: 3rem 0 5rem 0; /* former margin bottom 1rem*/
+   /* width:65%;*/
+}
 
 
-
-
-
-
-
+https://youtu.be/wX1T5mR_yVc?t=5832
 
 
 /* 
