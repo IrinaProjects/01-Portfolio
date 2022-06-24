@@ -384,7 +384,8 @@ section.skills .skill .head .left {
 
 
 section.skills .items {
-    margin-bottom: 3rem;
+    width: 98%;   
+    margin:0 auto 2rem auto;
     /* important- this is the gap between dropdown menuitems*/
 }
 
@@ -499,7 +500,7 @@ section.services .container .service:hover{
 
 section.services .container .service span{
     color: var(--primary);
-    font-size: 2rem;
+    font-size: 2.5rem;
    /*width: 4rem;
     height: 4rem;
     margin: 0 auto;
@@ -521,15 +522,61 @@ section.services .container .service:nth-child(3) span{
 }*/
 
 
-/* *************** PORFOLIO ******************** */
+/* *************** PORTFOLIO ******************** */
 section.recent-work h1{
-    text-align: left;
+    text-align: center; /* left only in mobile view*/
     margin: 3rem 0 5rem 0; /* former margin bottom 1rem*/
    /* width:65%;*/
 }
 
+section.recent-work .projects{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
 
-https://youtu.be/wX1T5mR_yVc?t=5832
+section.recent-work .projects .project{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+section.recent-work .projects .project .action{
+    display: flex;
+    gap: 2rem;
+   /* justify-content: space-between;*/
+}
+
+section.recent-work .projects .project a{
+    color: var(--primary);
+    font-weight: 700;
+   /*
+   color: var(--text-light-primary);
+    background: var(--primary);
+    border-radius: 8px;
+    width: 5rem;
+    height: 3rem;
+    text-align: center;
+    padding: 1rem;*/
+}
+
+section.recent-work .projects .project a:hover{
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* 
