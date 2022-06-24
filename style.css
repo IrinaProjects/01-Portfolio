@@ -673,8 +673,8 @@ section.contact form textarea:focus {
     color: var(--text-dark-secondary);
 }
 
-section.contact form .btn.btn-primary:hover {
-    padding: 1.6rem;
+section.contact form textarea{
+    height: 10rem;
 }
 
 section.contact form input::placeholder,
@@ -688,6 +688,7 @@ section.contact form .btn {
     border: none;
     background: var(--primary);
     color: var(--text-light-primary);
+    margin: 2rem auto 0;
 }
 
 section.contact form .btn:hover {
@@ -695,6 +696,10 @@ section.contact form .btn:hover {
     border: none;
     background: var(--bg-light-primary);
     color: var(--primary);
+}
+
+section.contact form .btn.btn-primary:hover {
+    padding: 1.6rem;
 }
 
 
