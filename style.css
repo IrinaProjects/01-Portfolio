@@ -667,7 +667,9 @@ section.contact form input:focus, section.contact form textarea:focus{
     color: var(--text-dark-secondary);
 }
 
-
+section.contact form .btn.btn-primary:hover{
+    padding: 1.6rem;
+}
 
 
 
