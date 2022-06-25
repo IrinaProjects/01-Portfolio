@@ -59,4 +59,9 @@ const swiper = new Swiper('.swiper', {
     skill.querySelector('.head').addEventListener('click', ()=>{
       skill.querySelector('.items').classList.toggle('show-items');
     })
+  });
+
+  //add box shadow on scroll
+  window.addEventListener('scroll', ()=>{
+    document.querySelector('nav').classList.toggle('show-box-shadow',window.scrollY>0);
   })
