@@ -33,8 +33,8 @@
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#contact">Let's Talk</a></li>
             </ul>
-            <button><span class="material-icons-sharp">menu</span></button>
-            <button><span class="material-icons-sharp">close</span></button>
+            <button id="menu-btn"><span class="material-icons-sharp">menu</span></button>
+            <button id="close-btn"><span class="material-icons-sharp">close</span></button>
         </div>
     </nav>
     <!-- NAV END-->
@@ -68,10 +68,10 @@
             <!-- Image-->
             <div class="profile-area">
                 <div class="outer-circle">
-                    <span class="material-icons-sharp">design_services</span>
-                    <span class="material-icons-sharp">code</span>
-                    <span class="material-icons-sharp">api</span>
-                    <span class="material-icons-sharp">insights</span>
+                    <span class="material-icons-sharp"><a href="#first" style="color: var(--primary);">design_services</a> </span>
+                    <span class="material-icons-sharp"><a href="#second" style="color: var(--primary);">code</a></span>
+                    <span class="material-icons-sharp"><a href="#third" style="color: var(--primary);">api</a></span>
+                    <span class="material-icons-sharp"><a href="#forth" style="color: var(--primary);">insights</a></span>
                 </div>
 
                 <div class="inner-circle">
@@ -375,7 +375,7 @@
             <div class="projects">
                 <div class="project">
                     <div class="thumbnail">
-                        <img src="./assets/pr1.jpg" alt="">
+                        <img src="./assets/pr1.jpg" alt="" id="first">
                     </div>
                     <h3>Complete Responsive E-Comerce Website with Stripe Checkout</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, alias distinctio a, dolorum harum
@@ -395,7 +395,7 @@
 
                 <div class="project">
                     <div class="thumbnail">
-                        <img src="./assets/pr2.jpg" alt="">
+                        <img src="./assets/pr2.jpg" alt="" id="second">
                     </div>
                     <h3>Complete Responsive E-Comerce Website with Stripe Checkout 2</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, alias distinctio a, dolorum harum
@@ -414,7 +414,7 @@
 
                 <div class="project">
                     <div class="thumbnail">
-                        <img src="./assets/pr3.jpg" alt="">
+                        <img src="./assets/pr3.jpg" alt="" id="third">
                     </div>
                     <h3>Complete Responsive E-Comerce Website with Stripe Checkout 3</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, alias distinctio a, dolorum harum
@@ -433,7 +433,7 @@
 
                 <div class="project">
                     <div class="thumbnail">
-                        <img src="./assets/pr4.jpg" alt="">
+                        <img src="./assets/pr4.jpg" alt="" id="forth">
                     </div>
                     <h3>Complete Responsive E-Comerce Website with Stripe Checkout 4</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, alias distinctio a, dolorum harum
@@ -574,19 +574,43 @@
                 <h1>Let's Talk</h1>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid beatae eos iusto commodi fugit
                     quasi excepturi. Accusantium quia culpa distinctio.</p>
-            <form action="https://formspree.io/f/mlezklkw" method="POST">
-                <input type="text" name="Name" placeholder="Name" required>
-                <input type="email" name="Email" placeholder="Email" required>
-                <input type="text" name="Subject" placeholder="Subject" required>
-                <textarea name="Message" placeholder="Message" required></textarea>
-                <input type="submit"  value="Submit" class="btn btn-primary">             
-            </form>
-                </div>
+                <form action="https://formspree.io/f/mlezklkw" method="POST">
+                    <input type="text" name="Name" placeholder="Name" required>
+                    <input type="email" name="Email" placeholder="Email" required>
+                    <input type="text" name="Subject" placeholder="Subject" required>
+                    <textarea name="Message" placeholder="Message" required></textarea>
+                    <input type="submit" value="Submit" class="btn btn-primary">
+                </form>
+            </div>
         </div>
     </section>
     <!-- CONTACTS END-->
 
-
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <a href="#">
+                <h3>ISS</h3>
+            </a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Let's Talk</a></li>
+            </ul>
+            <div class="socials">
+                <a href="https://uxfol.io/" target="_blank"><i class="uil uil-palette"></i></a>
+                <a href="https://www.linkedin.com/" target="_blank"><i class="uil uil-linkedin-alt"></i></a>
+                <a href="https://github.com/" target="_blank"><i class="uil uil-github-alt"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            Copyright &copy; Irina Spasova
+        </div>
+    </footer>
+    <!-- FOOTER END-->
 
 
     <!-- CONTENT END-->
